@@ -122,8 +122,8 @@ $projects = [
 $i = 0;
 while ($i < count($projects)) {
     echo
-        '<div class="col-md-4 custom-margin cards-container">
-            <div class="background-color hover card ' . $projects[$i]['class'] . '">
+        '<div class="col-md-4 custom-margin cards-container ' . $projects[$i]['class'] . '">
+            <div class="background-color hover ">
                     <div class="custom-heading heading-img">
                         <img src="' . $projects[$i]['img'] . '"/>
                     </div>

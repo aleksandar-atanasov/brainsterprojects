@@ -220,33 +220,17 @@ body {
     font-style: italic;
     border: none;
     outline: none;
-    padding: 3rem 2rem;    
+    padding: 30px;    
 }
-.special {
-    font-weight: bold !important;
-    padding: 15px 20px !important;
-    border-bottom: 1px solid rgba(94, 93, 93, 0.3);
-    margin: 0 !important;
-}
-.dropdown-menu{
-      padding: 0 !important;
-      outline: none !important;
-      border-radius: 6px !important;  
-}
-.bootstrap-select > .dropdown-toggle{
-      color: #363635 !important;
-      font-weight: bold;
-      padding: 20px 20px !important;
-      border: none !important;    
-}
-.dropdown-menu.open{
-      margin-top: 3.5rem !important;
-      border: none !important;
+.form-control{
+    padding: 20px !important;
+    height: 100%;
+    border: none !important;
 }
 .button.btn.btn-danger.btn-block{
-    padding: 20px 20px !important;
+    padding: 20px !important;
     text-transform: uppercase;
-    margin-top: 25px;    
+    margin-top: 25px;
 }
 .margin-bottom{
     margin-bottom: 5rem;

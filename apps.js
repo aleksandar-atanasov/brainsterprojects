@@ -118,7 +118,7 @@ function handle() {
 
 function hideAll() {
 
-    var allCards = document.querySelectorAll(".card");
+    var allCards = document.querySelectorAll(".cards-container");
     var i = 0;
     while(i < allCards.length) {
          allCards[i].style.display = "none";
