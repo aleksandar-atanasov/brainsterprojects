@@ -26,8 +26,6 @@ navSlide();
 
 let myListItems = document.querySelectorAll('.projects-nav');
 
-
-
 function setActive(type, element) {
 
     let isActive = element.classList.contains('active');
@@ -59,4 +57,82 @@ function setActive(type, element) {
             }
             break;
     }
+}
+
+
+document.querySelector("#show-it").addEventListener("change", handleIT); 
+document.querySelector("#show-design").addEventListener("change", handleDesign); 
+document.querySelector("#show-marketing").addEventListener("change", handleMarketing);
+            
+function handleIT() {
+    if(document.querySelector("#show-it").checked) {
+        document.querySelector("#show-design").checked = false;
+        document.querySelector("#show-marketing").checked = false;
+
+    }
+
+        handle();
+    }
+function handleMarketing() {
+    if(document.querySelector("#show-marketing").checked) {
+       document.querySelector("#show-design").checked = false;
+       document.querySelector("#show-it").checked = false;
+}
+
+        handle();
+
+    }
+
+function handleDesign() {
+    if(document.querySelector("#show-design").checked) {
+      document.querySelector("#show-marketing").checked = false;
+      document.querySelector("#show-it").checked = false;
+  }
+
+      handle();
+
+   }
+
+function handle() {
+    hideAll();
+    var counter = 0;
+    if(document.querySelector("#show-it").checked) {
+                    showByCategory(".it");
+                    counter++;
+                }
+    if(document.querySelector("#show-design").checked) {
+                    showByCategory(".design");
+                    counter++;
+                }
+
+    if(document.querySelector("#show-marketing").checked) {
+                    showByCategory(".marketing");   
+                    counter++;
+                }
+
+    if(counter == 0) {
+                    showByCategory(".card");
+                }
+                
+            }
+
+function hideAll() {
+
+    var allCards = document.querySelectorAll(".card");
+    var i = 0;
+    while(i < allCards.length) {
+         allCards[i].style.display = "none";
+        i++;
+}
+
+}
+
+function showByCategory(category) {
+        var cards = document.querySelectorAll(category);
+        i = 0;
+        while(i < cards.length) {
+        cards[i].style.display = "block";
+        i++; 
+    }
+    
 }

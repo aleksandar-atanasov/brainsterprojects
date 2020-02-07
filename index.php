@@ -90,22 +90,23 @@ $projects = [
     <div class="container-fluid">
         <div class="row filter-cards">
             <div class="col-md-4 col-sm-4 marketing-filter projects-nav">
-                    <p onclick="setActive('marketing', this)" id="show-marketing">
-                        Проекти на студенти по академијата<br /> за маркетинг 
-                        <span class="glyphicon glyphicon-ok-sign"></span>
-                    </p>
+                    <input type="checkbox" id="show-marketing" hidden name="card-category" 
+                    onclick="setActive('marketing', this)">
+                    <label for="show-marketing">Проекти на студенти по академијата<br /> за маркетинг
+                    <span class="glyphicon glyphicon-ok-sign"></span></label>
+
             </div>
             <div class="col-md-4 col-sm-4 programing-filter projects-nav">
-                    <p onclick="setActive('development', this)" id="show-it">
-                        Проекти на студенти по академијата<br /> за програмирање
-                        <span class="glyphicon glyphicon-ok-sign"></span>
-                    </p>
+                    <input type="checkbox" id="show-it" hidden name="card-category"
+                    onclick="setActive('development', this)">
+                    <label for="show-it">Проекти на студенти по академијата<br /> за програмирање
+                    <span class="glyphicon glyphicon-ok-sign"></span></label>
             </div>
             <div class="col-md-4 col-sm-4 design-filter projects-nav">
-                    <p onclick="setActive('design', this)" id="show-design">
-                        Проекти на студенти по академијата<br /> за дизајн
-                        <span class="glyphicon glyphicon-ok-sign"></span>
-                    </p>
+                    <input type="checkbox" id="show-design" hidden name="card-category"
+                    onclick="setActive('design', this)">
+                    <label for="show-design">Проекти на студенти по академијата<br /> за дизајн
+                    <span class="glyphicon glyphicon-ok-sign"></span></label>
             </div>
         </div>
     </div>
@@ -146,9 +147,6 @@ while ($i < count($projects)) {
 ?>
             </div>
         </div>
-    </div>
-    <div class="load-more-container main-background-color">
-        <button id="loadMore" onclick="renderCards()" class="load-more btn button btn-danger">Load More</button>
     </div>
     <div class="container-fluid">
         <div class="row">
