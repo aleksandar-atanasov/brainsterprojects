@@ -42,8 +42,8 @@
     </div>
     <div class="container-wrap main-background-color">
         <div class="container">
-            <div class="row">
-                <form method="POST" action="insert.php">
+            <form method="POST" action="insert.php">
+                <div class="row">
                     <div class="col-md-5 col-md-offset-1">
                         <div class="form-group">
                             <label for="name-surname">Име и презиме</label>
@@ -58,43 +58,44 @@
                                 placeholder="Име на вашата компанија" required name="companyName">
                         </div>
                     </div>
-            </div>
-            <div class="row">
-                <div class="col-md-5 col-md-offset-1">
-                    <div class="form-group">
-                        <label for="email">Контакт емаил</label>
-                        <input type="email" class="form-control InputEmail1" id="email"
-                            placeholder="Контакт емаил на вашата компанија" required name="email">
+                </div>
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1">
+                        <div class="form-group">
+                            <label for="email">Контакт емаил</label>
+                            <input type="email" class="form-control InputEmail1" id="email"
+                                placeholder="Контакт емаил на вашата компанија" required name="email">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label for="phone">Контакт телефон</label>
+                            <input type="text" class="form-control InputEmail1" id="phone"
+                                placeholder="Контакт телефон на вашата компанија" required name="phone">
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-5">
-                    <div class="form-group">
-                        <label for="phone">Контакт телефон</label>
-                        <input type="text" class="form-control InputEmail1" id="phone"
-                            placeholder="Контакт телефон на вашата компанија" required name="phone">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1 margin-bottom">
+                        <div class="form-group">
+                            <label>Тип на студенти</label>
+                            <select name="studentType" class="form-control" required>
+                                <option class="special selected hidden" value="">Изберете тип на студент</option>
+                                <option class="special" value="1">Студенти од маркетинг</option>
+                                <option class="special" value="2">Студенти од програмирање</option>
+                                <option class="special" value="3">Студенти од data science</option>
+                                <option class="special" value="4">Студенти од дизајн</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-5 col-md-offset-1 margin-bottom">
-                    <div class="form-group">
-                        <label>Тип на студенти</label>
-                        <select name="studentType" class="form-control" required>
-                            <option class="special selected hidden" value="">Изберете тип на студент</option>
-                            <option class="special" value="1">Студенти од маркетинг</option>
-                            <option class="special" value="2">Студенти од програмирање</option>
-                            <option class="special" value="3">Студенти од data science</option>
-                            <option class="special" value="4">Студенти од дизајн</option>
-                        </select>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <button class="button btn btn-danger btn-block" type="submit">Испрати</button>
+                        </div>
                     </div>
+
                 </div>
-                <div class="col-md-5">
-                    <div class="form-group">
-                        <button class="button btn btn-danger btn-block" type="submit">Испрати</button>
-                    </div>
-                </div>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
     <div class="container-fluid">
