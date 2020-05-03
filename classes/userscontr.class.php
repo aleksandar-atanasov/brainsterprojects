@@ -2,14 +2,12 @@
 
 class UsersContr extends Query
 {
-    public function insertEmail($email)
-    {
-        return $this->insert($email);
+  
+    public function registerUser(string $table, array $parameters){
+        
+       return $this->insertUsers($table, $parameters);
     }
-
-    public function checkForDuplicate($email)
-    {
-        return $this->getEmail($email);
+    public function loginUser($email){
+        return $this->getUser($email);
     }
-
 }

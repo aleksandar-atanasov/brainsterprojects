@@ -1,8 +1,19 @@
 <?php
 
-class Email
+class Email extends Query
 {
     private $email;
+
+
+     public function insertEmail($email)
+    {
+        return $this->insert($email);
+    }
+
+    public function checkForDuplicate(string $table , $email)
+    {
+        return $this->getEmail($table ,$email);
+    }
 
     public function isValid($email)
     {

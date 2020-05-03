@@ -1,29 +1,22 @@
 <?php
 session_start();
 require "dependencies/autoloader.php";
-if(empty($_SESSION)){
+
+if (empty($_SESSION)) {
     header("Location:index.php");
     die();
+} else if (!empty($_SESSION['email']) && !empty($_GET['id'])) {
+    $cardId = $_GET['id'];
+    $game = new CardsView();
+    $games = $game->selectGame($cardId);
+} else {
+    $id = $_SESSION['id'];
+    $game = new CardsView();
+    $games = $game->selectGame($id);
+
 }
-$id = $_SESSION['id'];
-$game = new CardsView();
-$games = $game->selectGame($id);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/style.css">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/ddf388975b.js" crossorigin="anonymous"></script>
-    <title>Games</title>
-</head>
+    <?php include_once 'public/views/header.php';?>
 <body class="games">
     <a id="top"></a>
     <?php include_once 'public/views/menu.php';?>
@@ -38,6 +31,8 @@ include 'public/views/menu-buttons.php';?>
     <div class="container gameContent">
         <div class="row">
             <div class="col-md-12 gameHeadline">
+                <a href="index.php"><button class="btn main-button">Back</button></a>
+                <a href="logout.php" class="pull-right"><button class="btn second-button">Logout</button></a>
                 <h1><?=$games['name']?></h1>
             </div>
         </div>
@@ -63,6 +58,12 @@ include 'public/views/menu-buttons.php';?>
                     <span class="small text-muted time-length"><?=$games['facilitation_level']?></span>
                 </div>
                 <div class="infoContent">
+                    <p><i class="fas fa-layer-group"></i>&nbsp;&nbsp;
+                        Комфорт зона
+                    </p>
+                    <span class="small text-muted time-length"><?=$games['group_size']?></span>
+                </div>
+                <div class="infoContent">
                     <p><i class="fas fa-paint-roller"></i>&nbsp;&nbsp;
                         Материјали</p>
                     <span class="small text-muted time-length"><?=$games['materials']?></span>
@@ -74,7 +75,7 @@ if (!empty($games['headline'])) {
     ?>
         <div class="row descriptionWrapper">
             <div class="col-md-12">
-                <p><?=$games['headline']?></p>
+                <p><?=$games['headline']?></>
             </div>
         </div>
         <?php
@@ -92,12 +93,18 @@ if (!empty($games['headline'])) {
                 <p><?=$games['step2']?></p>
             </div>
         </div>
+        <?php
+if (!empty($games['step3'])) {
+    ?>
         <div class="row stepWrapper">
             <div class="col-md-12">
                 <h2>Чекор 3</h2>
                 <p><?=$games['step3']?></p>
             </div>
         </div>
+        <?php
+}
+?>
         <?php
 if (!empty($games['step4'])) {
     ?>
@@ -136,17 +143,4 @@ if (!empty($games['step6'])) {
 ?>
     </div>
 
-
-
-
-
-
-</body>
-<script src="public/navbar.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
-
-</html>
+<?php include 'public/views/footer.php';?>

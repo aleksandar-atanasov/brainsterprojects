@@ -37,11 +37,12 @@
                 </div>
             </div>
             <ul class="navbar-links">
-                <li><a href="">Регистрирај се</a></li>
-                <li><a href="">Најави се</a></li>
+                <li><a href="index.php">Почетна</a></li>
+                <li><a href="register-page.php">Регистрирај се</a></li>
+                <li><a href="login-page.php">Најави се</a></li>
                 <li><a href="">За нас</a></li>
-                <li><a href="">Галерија</a></li>
-                <li><a href="">Контакт</a></li>
+                <li><a href="https://www.facebook.com/pg/brainster.co/photos/">Галерија</a></li>
+                <li><a href="contact-page.php">Контакт</a></li>
             </ul>
         </div>
 </div>

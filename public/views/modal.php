@@ -11,16 +11,16 @@ if (isset($_GET['email']) && $_GET['email'] == 'invalid') {
         <h4 class="modal-title text-center">Enter your email to continue</h4>
       </div>
       <form method="POST" action="./insert.php" class="signUpForm">
-        <div class="modal-body">
-          <div class="form-group">
-              <p class="bg-warning text-danger errorMsg"><?=$errorMsg?></p>
-              <input type="email" name="email" id="email" placeholder="Enter your email.." required>
-              <input type="hidden" name="cardId" value="<?=$card['id']?>">
+          <div class="modal-body">
+            <div class="form-group">
+                <p class="bg-warning text-danger errorMsg"><?=$errorMsg?></p>
+                <input type="email" name="email" id="email" placeholder="Enter your email.." required class="form-control"> 
+                <input type="hidden" name="cardId" value="<?=$card['id']?>">
+            </div>
           </div>
-        </div>
-         <div class="modal-footer">
-            <button type="submit" class="btn main-button" id="submitBtn">Submit</button>
-         </div>
+          <div class="modal-footer">
+              <button type="submit" class="btn main-button" id="submitBtn">Submit</button>
+          </div>
       </form>
     </div>
   </div>

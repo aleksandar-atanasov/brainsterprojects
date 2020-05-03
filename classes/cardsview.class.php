@@ -12,4 +12,8 @@ class CardsView extends Query
     {
         return $this->getGame($id);
     }
+    public function countCategory(string $category)
+    {
+        return $this->getCategory($category);
+    }
 }
