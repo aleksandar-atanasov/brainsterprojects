@@ -23,7 +23,7 @@ function printError()
             'registered' => "Одјавете се за да можете повторно да се регистрирате!"
         ];
         if (isset($errorMessages[$_GET['error']])) {
-            echo "<p class='bg-danger text-danger'>" . $errorMessages[$_GET['error']] . "</p>";
+            echo "<p class='bg-danger text-danger'><i class='fas fa-exclamation-triangle'></i> " . $errorMessages[$_GET['error']] . "</p>";
         }
 
     }
@@ -36,7 +36,7 @@ function printSuccess()
         ];
 
         if (isset($successMessages[$_GET['success']])) {
-            echo "<p class='bg-success text-success'>" . $successMessages[$_GET['success']] . "</p>";
+            echo "<p class='bg-success text-success'><i class='fas fa-check-circle'></i> " . $successMessages[$_GET['success']] . "</p>";
         }
     }
 }

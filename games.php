@@ -42,7 +42,7 @@ include 'public/views/menu-buttons.php';?>
                     <p><i class="far fa-clock"></i>&nbsp;&nbsp;
                         Временска рамка
                     </p>
-                    <span class="small text-muted time-length"><?=$games['time_frame']?></span>
+                    <span class="small text-muted time-length"><?=$games['time_frame']?> минути</span>
                 </div>
                 <div class="infoContent">
                     <p><i class="fas fa-users"></i>&nbsp;&nbsp;

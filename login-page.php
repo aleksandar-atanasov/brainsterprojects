@@ -45,9 +45,11 @@ if(isset($_SESSION['first_name'])){
                 </figure>
                 <figure>
                     <img src="./images/banner2.jpg" alt="img-banner">
-                </figure> <figure>
+                </figure>
+                <figure>
                     <img src="./images/banner3.jpg" alt="img-banner">
-                </figure> <figure>
+                </figure>
+                <figure>
                     <img src="./images/banner4.jpg" alt="img-banner">
                 </figure>
             </div>
