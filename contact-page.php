@@ -36,7 +36,7 @@ require "dependencies/autoloader.php";
                     </form>
             </div>
             <div class="col-md-6 contact-banner-holder">
-                <img src="./images/contact-page-banner.png">
+                <img src="./images/contactUs.svg">
             </div>
         </div>
         <div class="row">

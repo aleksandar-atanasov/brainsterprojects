@@ -16,7 +16,7 @@ if(!isset($_SESSION['email'])){
         <div class="row">
         <div class="col-md-5 banner-holder">
             </div>
-            <div class="col-md-7 table-wrapper">
+            <div class="col-md-7 col-xs-6 col-sm-6 table-wrapper">
                 <h3>Админ Панел</h3>
                 <?php
                     printError();

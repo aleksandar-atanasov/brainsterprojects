@@ -3,7 +3,7 @@ session_start();
 include 'dependencies/autoloader.php';
 $card = new Cardsview();
 $cards = $card->showAll();
-?>
+?>  
     <?php include_once 'public/views/header.php';?>
 <body>
     <a id="top"></a>
@@ -25,7 +25,9 @@ $cards = $card->showAll();
         </div>
         <?php include 'public/views/assessment.php';?>
         <?php include 'public/views/filters.php';?>
-
+        <div class="filters-button">
+            <button class="btn second-button pull-right filterBtn"><i class="fas fa-level-up-alt"></i> Filters</button>
+         </div>
             <div class="container cards-container">
                 <div class="row">
                     <?php
@@ -63,4 +65,6 @@ $cards = $card->showAll();
          include 'public/views/modal.php'; //gi povikuvame site modali za sekoja karticka posebno
             }
       ?>
+       
+
  <?php include 'public/views/footer.php';?>

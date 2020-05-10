@@ -44,3 +44,25 @@ hamburger.addEventListener("click", navbarActiveEventHandler);
 hamburger.addEventListener("click", linksFadeEventHandler);
 closeNav.addEventListener("click", navbarRemoveActiveEventHandler);
 closeNav.addEventListener("click", linksFadeEventHandler);
+
+let filterContainer = document.querySelector('.filtersContainer');
+let filterBtn = document.querySelector('.filterBtn');
+let filterBtnContainer = document.querySelector('.filters-button');
+let searchFilter = document.querySelector('#searchBtn');
+let body = document.getElementsByTagName('body');
+  
+
+function filtersActiveEventHandler(){
+  filterContainer.classList.add('filters-active');
+}
+
+function removeActiveFiltersEventHandler(){
+  if(filterContainer.classList.contains('filters-active')){
+    filterContainer.classList.remove('filters-active');
+
+  }
+}
+filterBtn.addEventListener('click', filtersActiveEventHandler);
+searchFilter.addEventListener('click', removeActiveFiltersEventHandler);
+
+

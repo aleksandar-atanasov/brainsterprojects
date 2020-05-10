@@ -12,6 +12,7 @@ html {
 .logo img {
   width: 150px;
 }
+
 .logo {
   display: flex;
   width: 34%;
@@ -214,6 +215,9 @@ html {
 .flex-button {
   display: flex;
   justify-content: center;
+}
+.filters-button{
+  display: none;
 }
 .filtersContainer {
   margin-top: 5em;
@@ -419,6 +423,26 @@ html {
 .social-icons-wrapper i:hover{
   color: #01031f;
 }
+.filters-button{
+  margin-top: 3em;
+  justify-content: flex-end;
+  align-items: center;
+  height: 10vh;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 50vh;
+  z-index: 4;
+}
+.filters-button button{
+  border-radius: 0;
+  padding: 1em;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.filters-button button i{
+  font-size: 20px;
+}
 /* games page */
 .games .menu-wrapper {
   background: transparent;
@@ -484,9 +508,6 @@ html {
   line-height: 1.8em;
   border-bottom: 1px solid rgba(56, 56, 56, 0.205);
   text-align: left;
-}
-.games .footer, .games .footer::before{
-  height: 50vh;
 }
 /* register page*/
 .register{
@@ -558,9 +579,6 @@ html {
 }
 .img-banner figure:nth-child(4){
   grid-row: 4 / 7;
-}
-.register .footer, .register .footer::before{
-  height: 50vh;
 }
 figure:hover img{
   transition: all .5s ease 0s;
@@ -701,8 +719,48 @@ figure:hover img{
   .img-banner{
     display: none;
   }
+  .cards-container{
+    margin-bottom: 25vh;
+  }
+  .filtersContainer{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transform: translateY(-70%);
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  }
+  .filters-active{
+  transform: translateY(-20%);
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    z-index: 5;
+
+  }
+  .filtersWrapper{
+    flex-direction: column;
+  }
+  .filters-button{
+    display: flex;
+  }
+  .searchError{
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .submitBtn{
+  padding: 0.8em 0;
+  color: #ff0831;
+  }
   .main-register-container{
     margin-bottom: 35vh;
+  }
+  .form-wrapper{
+    margin-bottom: 20vh;
   }
   .footer-content{
     flex-direction: column;
@@ -714,11 +772,27 @@ figure:hover img{
   .footer-logo img{
     width: 120px;
   }
+  .gameInfo{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+   }
+   .banner-holder{
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .menu-buttons {
     display: none;
+  }
+  .xs-hidden {
+    display: none;
+  }
+  .panel-content {
+    height: auto;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
   }
   .buttons-hidden-lg {
     display: inline;
@@ -787,6 +861,9 @@ figure:hover img{
   .buttons-small {
     display: flex;
   }
+  .img-banner{
+    display: none;
+  }
   @keyframes navLinkFade {
     from {
       opacity: 0;
@@ -797,4 +874,43 @@ figure:hover img{
       transform: translateY(0);
     }
   }
+  .filtersContainer{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+    background-color: white;
+    transform: translateY(-100%);
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    }
+    .filters-active{
+    transform: translateY(-20%);
+      opacity: 1;
+      visibility: visible;
+      position: absolute;
+      z-index: 5;
+  
+    }
+    .filtersWrapper{
+      flex-direction: column;
+    }
+    .filters-button{
+      display: flex;
+    }
+    .searchError{
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+    .filters-button{
+      top: 30vh;
+    }
+    .submitBtn{
+      padding: 1.5em;
+      color: #ff0831;
+    }
+ 
 }

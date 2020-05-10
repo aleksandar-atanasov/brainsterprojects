@@ -13,7 +13,7 @@ if(isset($_SESSION['first_name'])){
 
     <div class="container-fluid main-register-container">
         <div class="row">
-            <div class="col-md-6 form-wrapper">
+            <div class="col-md-6 col-xs-12 form-wrapper">
                 <h3 id="register-heading">Регистрирај се</h3>
                     <?php
                         printError();
@@ -80,7 +80,7 @@ if(isset($_SESSION['first_name'])){
                             </div>
                     </form>
             </div>
-            <div class="col-md-6 img-banner">
+            <div class="col-md-6 col-xs-hidden col-sm-hidden img-banner">
                 <figure>
                     <img src="./images/banner1.jpg" alt="img-banner">
                 </figure>

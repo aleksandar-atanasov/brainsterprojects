@@ -38,6 +38,7 @@ abstract class Query extends Dbh
         $sql = "SELECT * FROM cards WHERE category = :category";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute(['category' => $category]);
+        $stmt->fetchAll();
         return $stmt->rowCount();
     }
 

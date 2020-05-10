@@ -1,28 +1,28 @@
 <div class="filtersContainer container">
-        <form action="filter-cards.php" method="POST">
+        <form>
             <div class="row filtersRow">
                  <div class="col-md-6">
                  <span class="filterSpan">Browse by Category</span>
                      <div class="row filtersWrapper">
                             <div class="filterContent energizers col-md-4">
                                 <input type="checkbox" id="energizers" value="Energizers" class="categoryFilter">
-                                <label for="energizers">ENERGIZERS (<?=$card->countCategory('energizers')?>)</label>
+                                <label for="energizers">ENERGIZERS</label>
                             </div>
                             <div class="filterContent col-md-4">
                                 <input type="checkbox" id="inovation" value="Inovation" class="categoryFilter">
-                                <label for="inovation">INOVATION (<?=$card->countCategory('inovation')?>)</label>
+                                <label for="inovation">INOVATION</label>
                             </div>
                             <div class="filterContent col-md-4">
                                 <input type="checkbox" id="leadership" value="Leadership" class="categoryFilter">
-                                <label for="leadership">SELF-LEADERSHIP (<?=$card->countCategory('leadership')?>)</label>
+                                <label for="leadership">SELF-LEADERSHIP</label>
                             </div>
                             <div class="filterContent col-md-4">
                                 <input type="checkbox" id="action" value="Action" class="categoryFilter">
-                                <label for="action">ACTION (<?=$card->countCategory('action')?>)</label>
+                                <label for="action">ACTION</label>
                             </div>
                             <div class="filterContent col-md-4">
                                 <input type="checkbox" id="team" value="Team" class="categoryFilter">
-                                <label for="team">TEAM (<?=$card->countCategory('team')?>)</label>
+                                <label for="team">TEAM</label>
                             </div>
                             <div class="checkboxAll col-md-4">
                                 <input type="checkbox" id="all" value="All" class="categoryFilter" checked>
