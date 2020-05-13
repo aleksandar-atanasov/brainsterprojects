@@ -9,8 +9,8 @@
             <div class="col-md-12 footer-content">
                 <div class="links-wrapper">
                     <ul class="links-list">
-                        <li><a href="about.php">За нас</a></li>
-                        <li><a href="contact.php">Контакт</a></li>
+                        <li><a href="">За нас</a></li>
+                        <li><a href="contact-page.php">Контакт</a></li>
                         <li><a href="https://www.facebook.com/pg/brainster.co/photos/">Галерија</a></li>
                     </ul>
                 </div>
