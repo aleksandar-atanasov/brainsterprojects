@@ -4,7 +4,9 @@
             <div class="col-md-4 cards-column">
             <a href="{{route('show.category',$category->label)}}">
                     <div class="card h-100">
-                        <img src="/img/{{$category->image}}">
+                        <div class="card-image">
+                            <img src="{{ asset('storage/'. $category->image)}}">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">{{$category->name}}</h5>
                             <p class="card-text">{{$category->description}}</p>

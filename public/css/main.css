@@ -123,11 +123,15 @@ ul {
     width: 100%;
 }
 
-.card img {
-    width: 100%;
-    border-top-right-radius: 12px;
-    border-top-left-radius: 12px;
+.card-image img {
+    width: 170px;
+}
+
+.card-image {
     height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cards-column {
@@ -136,10 +140,23 @@ ul {
 
 .cards-column a {
     text-decoration: none;
+    color: rgba(0, 0, 0, 0.671);
+}
+
+.cards-column:hover img {
+    transition: all .5s ease 0s;
+    transform: scale(1.15) rotate(-1.5deg);
+
 }
 
 .card {
     border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card-footer {
+    border: none;
 }
 
 .lectures,
@@ -161,4 +178,26 @@ ul {
     background-color: rgb(247, 217, 162);
     padding: 2px 7px;
     color: rgb(196, 127, 0);
+}
+
+#dropdownMenuButton:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.banner-action {
+    background-color: rgba(216, 216, 216, 0.247);
+    padding: 0.8em 1em;
+    color: rgba(0, 0, 0, 0.671);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.banner-action:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #5e5af5;
 }

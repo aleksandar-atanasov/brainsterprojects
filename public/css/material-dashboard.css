@@ -5079,22 +5079,24 @@ tbody.collapse.show {
     padding: 0.5rem 0.75rem;
     margin-left: 0;
     line-height: 1.25;
-    color: #2196f3;
+    color: #5e5af5;
     background-color: transparent;
     border: 0 solid #dee2e6;
 }
 
 .page-link:hover {
-    color: #0a6ebd;
+    color: #5e5af5;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #dee2e6;
+    border-radius: 1.25rem;
 }
 
 .page-link:focus {
     z-index: 2;
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(33, 150, 243, 0.25);
+    border-radius: 1.25rem;
 }
 
 .page-link:not(:disabled):not(.disabled) {
@@ -5103,20 +5105,20 @@ tbody.collapse.show {
 
 .page-item:first-child .page-link {
     margin-left: 0;
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-left-radius: 1.25rem;
 }
 
 .page-item:last-child .page-link {
-    border-top-right-radius: 0.25rem;
-    border-bottom-right-radius: 0.25rem;
+    border-top-right-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
 }
 
 .page-item.active .page-link {
     z-index: 1;
     color: #ffffff;
-    background-color: #2196f3;
-    border-color: #2196f3;
+    background-color: #5e5af5;
+    border-radius: 1.25rem;
 }
 
 .page-item.disabled .page-link {
@@ -5125,6 +5127,7 @@ tbody.collapse.show {
     cursor: auto;
     background-color: transparent;
     border-color: #dee2e6;
+
 }
 
 .pagination-lg .page-link {
@@ -11567,7 +11570,7 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
 }
 
 .form-check .form-check-input:checked~.form-check-sign .check {
-    background: #9c27b0;
+    background: #5e5af5;
 }
 
 .form-check .form-check-input:checked~.form-check-sign .check:before {
@@ -11723,7 +11726,7 @@ fieldset[disabled] .form-group.is-focused .form-check .form-check-label {
 }
 
 .form-check .form-check-input:checked~.circle {
-    border-color: #9c27b0;
+    border-color: #5e5af5;
 }
 
 .form-check .form-check-input:checked .check:before {
@@ -12043,7 +12046,7 @@ fieldset[disabled] .is-focused .switch label:focus {
 
 .form-control,
 .is-focused .form-control {
-    background-image: linear-gradient(to top, #9c27b0 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
+    background-image: linear-gradient(to top, #5e5af5 2px, rgba(156, 39, 176, 0) 2px), linear-gradient(to top, #d2d2d2 1px, rgba(210, 210, 210, 0) 1px);
 }
 
 .form-control:invalid {

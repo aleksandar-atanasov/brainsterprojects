@@ -11,18 +11,31 @@
             @empty
             <div class="media lectures">
                 <div class="media-body">
-                <h5 class="mt-0">Сеуште не постојат лекции за оваа категорија</h5>
+                <p class="text-info text-center">Сеуште не постојат лекции за оваа категорија!</p>
                 </div>
             </div>
             @endforelse
         </div>
         <div class="col-md-4" style="padding-right: 0">
+            @forelse ($banners as $banner)
             <div class="media banner">
                 <div class="media-body">
-                  <h5 class="mt-0">Media heading</h5>
-                 <p class="text-muted">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+                  <h5 class="mt-0">{{$banner->title}}</h5>
+                  <p class="text-muted">{{$banner->description}}</p>
+                    <a href="{{$banner->link}}" class="banner-action">
+                        <span>Дознај повеќе</span>
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
+            @empty
+            <div class="media banner">
+                <div class="media-body">
+                <p class="text-center text-info">Сеуште нема активни банери!</p>
+            </div>
+            </div>
+            @endforelse
+
         </div>
     </div>
 </div>

@@ -4,7 +4,7 @@
     <!-- End Navbar -->
     <div class="content">
       <div class="container-fluid">
-
+          @include('admin.categories.create')
       </div>
     </div>
 </div>

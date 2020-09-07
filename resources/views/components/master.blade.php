@@ -7,10 +7,6 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    @auth
-        <meta name="api_token" content="{{ auth()->user()->api_token }}">
-    @endauth
-
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
@@ -18,8 +14,11 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     {{$adminCss ?? ''}}
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @if (!str_contains(request()->path(), 'admin'))
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @endif
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -30,8 +29,11 @@
 
 
     <!-- Scripts -->
+    <script src="{{ asset('/bower_components/jquery/dist/jquery.js') }}"></script>
+     <!-- Jquery-Validation -->
+     <script src="{{ asset('/bower_components/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+     <script src="{{ asset('/bower_components/jquery-validation/dist/additional-methods.min.js') }}"></script>
     {{$adminScripts ?? ''}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/main.js') }}"></script>
 </body>

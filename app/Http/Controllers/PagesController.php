@@ -9,10 +9,7 @@ class PagesController extends Controller
 {
     public function index(){
 
-        return view('admin.dashboard', ['users' => User::select('id','email')->latest()->get()]);
-    }
-
-    public function categories(){
-        return view('admin.categories.categories');
+        $users = User::where('role_id', '!=', 1)->select('id','email')->latest()->get();
+        return view('admin.dashboard', ['users' => $users]);
     }
 }

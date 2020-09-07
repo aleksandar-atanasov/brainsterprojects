@@ -11,7 +11,7 @@ class UsersController extends Controller
 
         try {
             $user = User::create(request()->validate([
-            'email' => 'required|email|unique:users'
+            'email' => 'required|email|unique:users',
         ]));
 
         if($request->has('category')){

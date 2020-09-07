@@ -1,0 +1,21 @@
+{
+  "name": "brainsterprojects",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Aleksandar Atanasov <bubi_aleks@yahoo.com>"
+  ],
+  "license": "MIT",
+  "homepage": "/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "jquery-validation": "^1.19.2"
+  }
+}

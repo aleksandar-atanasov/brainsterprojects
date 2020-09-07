@@ -2,7 +2,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">
+        <h5 class="modal-title" id="title">
           @if (isset($category))
              Пријави се за  {{$category->name}}
           @else
@@ -14,11 +14,17 @@
           </button>
         </div>
         <div class="modal-body">
-        <form action="{{route('store.user')}}" method="POST">
+        <form action="{{route('store.user')}}" method="POST" id="storeUser" enctype="multipart/form-data">
             @csrf
                 <div class="form-group">
                     <label for="email">Емаил адреса</label>
-                    <input type="emal" id="email"class="form-control" name="email">
+                <input type="email"
+                        id="email"
+                        class="form-control"
+                        name="email"
+                        value="{{old('email')}}"
+                        placeholder="Вашата емаил адреса">
+                    <label id="email-error" class="error" for="email"></label>
                     <input type="hidden" name="category" value="{{$category->id ?? ''}}">
                 </div>
                 @isset($categories)

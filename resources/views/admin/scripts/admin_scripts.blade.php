@@ -1,5 +1,5 @@
   <!--   Core JS Files   -->
-    <script src="{{asset('js/material_dashboard/core/jquery.min.js')}}"></script>
+    {{-- <script src="{{asset('js/material_dashboard/core/jquery.min.js')}}"></script> --}}
     <script src="{{asset('js/material_dashboard/core/popper.min.js')}}"></script>
     <script src="{{asset('js/material_dashboard/core/bootstrap-material-design.min.js')}}"></script>
     <script src="{{asset('js/material_dashboard/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
@@ -8,7 +8,7 @@
     <!--  Plugin for Sweet Alert -->
     <script src="{{asset('js/material_dashboard/plugins/sweetalert2.js')}}"></script>
     <!-- Forms Validations Plugin -->
-    <script src="{{asset('js/material_dashboard/plugins/jquery.validate.min.js')}}"></script>
+    {{-- <script src="{{asset('js/material_dashboard/plugins/jquery.validate.min.js')}}"></script> --}}
     <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
     <script src="{{asset('js/material_dashboard/plugins/jquery.bootstrap-wizard.js')}}"></script>
     <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->

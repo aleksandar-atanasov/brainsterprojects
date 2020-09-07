@@ -14,7 +14,7 @@ class Category extends Model
     }
 
     public function lectures(){
-        return $this->hasMany(Lecture::class)->orderBy('created_at');
+        return $this->hasMany(Lecture::class)->latest();
     }
 
     public function numLectures(){
