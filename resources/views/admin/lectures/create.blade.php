@@ -57,7 +57,11 @@
                                 <td>{{$lecture->title}}</td>
                                 <td>{{$lecture->category->name}}</td>
                                 <td>{{$lecture->created_at}}</td>
-                                <td>
+                                <td style="display: flex">
+                                    <a href="{{route('lecture.edit',$lecture->id)}}"
+                                        class="btn btn-fab btn-round mainButton">
+                                            <i class="material-icons">edit</i>
+                                    </a> &nbsp;
                                 <form action="{{route('lecture.delete', $lecture->id)}}" method="POST">
                                         @csrf
                                         @method('delete')

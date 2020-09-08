@@ -30,6 +30,27 @@ class LectureController extends Controller
         }
     }
 
+    public function edit(Lecture $lecture){
+
+        return view('admin.lectures.edit', [
+                    'lecture' => $lecture,
+                    'categories' => Category::all()
+        ]);
+    }
+
+    public function update(LectureRequest $request, Lecture $lecture){
+
+        $data = $request->validated();
+
+        try {
+            $lecture->update($data);
+            return redirect()->route('lecture.index')->withSuccess('Успешно беше изменета лекцијата со наслов ' . $data['title']);
+
+        } catch (\Throwable $th) {
+            return redirect()->back()->withErrors(['error' => 'Лекцијата не беше успешно изменета']);
+        }
+
+    }
     public function destroy(Lecture $lecture){
 
         try {

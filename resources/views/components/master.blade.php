@@ -25,7 +25,11 @@
 
     <div id="app">
        {{$slot}}
+
+
+       @include('inc._footer')
     </div>
+
 
 
     <!-- Scripts -->

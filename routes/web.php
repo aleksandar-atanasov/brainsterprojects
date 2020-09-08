@@ -31,7 +31,10 @@ Route::prefix('admin')->middleware(['auth'])->group(function() {
 
     Route::get('lectures', 'LectureController@index')->name('lecture.index');
     Route::post('lecture', 'LectureController@store')->name('lecture.store');
+    Route::get('lecture/edit/{lecture:id}', 'LectureController@edit')->name('lecture.edit');
+    Route::put('lecture/{lecture:id}', 'LectureController@update')->name('lecture.update');
     Route::delete('lecture/{lecture:id}', 'LectureController@destroy')->name('lecture.delete');
+
 
     Route::get('banners', 'BannerController@index')->name('banner.index');
     Route::post('banners', 'BannerController@store')->name('banner.store');
