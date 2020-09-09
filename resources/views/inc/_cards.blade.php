@@ -1,7 +1,7 @@
 <div class="container cards-container">
     <div class="row">
         @foreach ($categories as $category)
-            <div class="col-md-4 cards-column">
+            <div class="col-md-6 col-lg-4 cards-column">
             <a href="{{route('show.category',$category->label)}}">
                     <div class="card h-100">
                         <div class="card-image">

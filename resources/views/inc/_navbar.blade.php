@@ -35,6 +35,52 @@
                 </div>
               </div>
             @endguest
-        </div>
+           </div>
     </nav>
+    <div class="nav-mobile">
+        <ul class="navbar-links">
+            <li>
+                <a href="">
+                    <i class="fa fa-leanpub"></i><br>
+                    <p class="text-small">Академии</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-weixin"></i>
+                    <p class="text-small">Вебинари</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-briefcase"></i>
+                    <p class="text-small">Кариера</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fa fa-th-large"></i>
+                    <p class="text-small">Блог</p>
+                </a>
+            </li>
+            <li>
+                @guest
+                    <a href="" data-toggle="modal" data-target="#emailModal" data-backdrop="static">
+                        <i class="fa fa-user-plus"></i>
+                        <p class="text-small">Пријави се</p>
+                    </a>
+                @else
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                    document.querySelector('.logout-form').submit();">
+                    <i class="fa fa-sign-out"></i>
+                    <p class="text-small">Одјави се</p>
+                </a>
+                    <form class="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                    </form>
+                @endguest
+            </li>
+        </ul>
+    </div>
 </div>

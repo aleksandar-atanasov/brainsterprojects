@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-8" style="padding-left: 0">
+        <div class="col-md-8 lecture-wrapper" style="padding-left: 0">
             @forelse ($category->lectures as $lecture)
                 <div class="media lectures">
                     <div class="media-body">
@@ -16,7 +16,7 @@
             </div>
             @endforelse
         </div>
-        <div class="col-md-4" style="padding-right: 0">
+        <div class="col-md-4 banner-wrapper" style="padding-right: 0">
             @forelse ($banners as $banner)
             <div class="media banner">
                 <div class="media-body">
