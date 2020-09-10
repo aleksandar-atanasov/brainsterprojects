@@ -8,7 +8,7 @@
             </div>
             <div class="card-body">
                 <h6 class="card-title">Регистрирани корисници</h6>
-                <table class="table">
+                <table class="table table-responsive-sm">
                     <thead>
                         <tr class="text-muted">
                             <th>#</th>

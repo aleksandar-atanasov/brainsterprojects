@@ -41,7 +41,7 @@
         <ul class="navbar-links">
             <li>
                 <a href="">
-                    <i class="fa fa-leanpub"></i><br>
+                    <i class="fa fa-graduation-cap"></i>
                     <p class="text-small">Академии</p>
                 </a>
             </li>

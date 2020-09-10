@@ -27,7 +27,7 @@
        {{$slot}}
 
 
-       @include('inc._footer')
+       {{-- @include('inc._footer') --}}
     </div>
 
 

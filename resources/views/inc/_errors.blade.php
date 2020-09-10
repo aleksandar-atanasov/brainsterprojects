@@ -1,5 +1,5 @@
 @if ($errors->any())
-<div class="row">
+<div class="row error">
     <div class="col-md-12">
 
     @foreach ($errors->getMessages() as $key => $messages)

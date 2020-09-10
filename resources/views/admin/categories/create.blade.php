@@ -41,7 +41,7 @@
             </div>
             <div class="card-body">
                 <h6 class="card-title">Категории</h6>
-                <table class="table">
+                <table class="table table-responsive-sm">
                     <thead>
                         <tr>
                             <th>Име</th>
