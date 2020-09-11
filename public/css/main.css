@@ -97,7 +97,7 @@ ul {
     color: white;
 }
 
-input:focus {
+.input input:focus {
     color: white;
 }
 

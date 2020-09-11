@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-    console.log('hello');
     var choice = new Choices('#category', {
         removeItemButton: true,
         maxItemCount: 6,
@@ -9,28 +8,6 @@ $(document).ready(function () {
         noResultsText: 'Не беа пронајдени резултати',
         itemSelectText: 'Избери',
     });
-
-
-    // $("#storeUser").validate({
-    //     // Specify validation rules
-    //     rules: {
-    //         email: {
-    //             required: true,
-    //             email: true
-    //         },
-    //         category: {
-    //             required: true,
-    //         }
-    //     },
-    //     messages: {
-    //         email: "Please enter your email",
-    //         category: "Please izberi bar 1 kategorija"
-    //     },
-    //     submitHandler: function (form) {
-    //         form.submit();
-    //     }
-    // });
-
 });
 
 

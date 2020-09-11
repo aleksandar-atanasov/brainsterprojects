@@ -23,14 +23,15 @@
                         class="form-control"
                         name="email"
                         value="{{old('email')}}"
-                        placeholder="Вашата емаил адреса">
+                        placeholder="Вашата емаил адреса"
+                        required >
                     <label id="email-error" class="error" for="email"></label>
                     <input type="hidden" name="category" value="{{$category->id ?? ''}}">
                 </div>
                 @isset($categories)
                   <div class="form-group">
                       <label for="category">Категории</label>
-                      <select name="category[]" id="category" class="form-control" multiple data-trigger>
+                      <select name="category[]" id="category" class="form-control" multiple data-trigger required>
                         @foreach ($categories as $category)
                             <option value="{{$category->id}}">{{$category->name}}</option>
                         @endforeach
