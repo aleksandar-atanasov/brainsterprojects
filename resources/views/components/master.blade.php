@@ -33,11 +33,11 @@
     <!-- Scripts -->
     <script src="{{ asset('/bower_components/jquery/dist/jquery.js') }}"></script>
     {{$adminScripts ?? ''}}
-    <!-- Include Choices JavaScript (latest) -->
-    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
-    <!-- Or versioned -->
-    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/main.js') }}"></script>
+    @if (request()->path() === '/')
+        <!-- Include Choices JavaScript (latest) -->
+        <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+        <script src="{{ asset('js/main.js') }}"></script>
+    @endif
 </body>
 </html>
