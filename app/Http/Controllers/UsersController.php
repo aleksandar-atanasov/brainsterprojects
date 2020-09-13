@@ -4,15 +4,16 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 
 class UsersController extends Controller
 {
-    public function store(Request $request){
+    public function store(UserRequest $request){
 
+        $data = $request->validated();
         try {
-            $user = User::create(request()->validate([
-            'email' => 'required|email|unique:users',
-        ]));
+
+            $user = User::create($data);
 
         if($request->has('category')){
             $user->categories()->attach(request('category'));

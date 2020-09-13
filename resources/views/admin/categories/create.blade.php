@@ -21,13 +21,17 @@
                     <div class="form-group">
                         <textarea name="description" id="desc" class="form-control" placeholder="Опис"></textarea>
                     </div>
-                    <div class="form-group form-file-upload">
+                    <div class="form-group form-file-upload mb-4">
                         <label for="image" class="btn btn-fab btn-round mainButton" title="Додади слика">
                             <i class="material-icons">attach_file</i>
                         </label>
-                        <input type="file" name="image" id="image">
+                        <input type="file" name="image" id="image" onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
+                        <img id="output" src="/img/image-icon.png"
+                                         width="50"
+                                         height="50"
+                                         class="rounded-circle pull-right">
                     </div>
-                    <button type="submit" class="mainButton float-right">Додади</button>
+                    <button type="submit" class="mainButton pull-right">Додади</button>
                 </form>
             </div>
         </div>
