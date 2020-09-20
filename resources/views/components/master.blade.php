@@ -29,7 +29,9 @@
     </div>
 
 
-
+    @if(!str_contains(request()->path(), 'admin'))
+        @include('inc._footer')
+    @endif
     <!-- Scripts -->
     <script src="{{ asset('/bower_components/jquery/dist/jquery.js') }}"></script>
     {{$adminScripts ?? ''}}

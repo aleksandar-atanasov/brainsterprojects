@@ -236,6 +236,20 @@ ul {
     color: #ffffff;
 }
 
+.footer {
+    background-color: rgb(85, 85, 87);
+    padding: 2em 1em;
+    margin-top: 4em;
+    color: white;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer i {
+    color: red;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 1024px) {
 
